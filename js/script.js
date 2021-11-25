@@ -15,5 +15,8 @@ getImage();
 const selectRandomImage= function(images){
     const randomIndex = Math.floor(Math.random()*images.length);
     //console.log(randomIndex);
+    const randomImage = `https://picsum.photos/id/${randomIndex}/200/300`;
+    console.log(randomImage);
 };
+
 
