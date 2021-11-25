@@ -8,12 +8,29 @@ const getImage= async function(){
     const images = await res.json();
     console.log(images);
     selectRandomImage(images);
+    
 }
 
-getImage();
+
 
 const selectRandomImage= function(images){
     const randomIndex = Math.floor(Math.random()*images.length);
     //console.log(randomIndex);
+    const randomImage = images[randomIndex];
+    console.log(randomImage);
+    displayImage(randomImage);
 };
+
+const displayImage = function(randomImage){
+    const author= randomImage.author;
+    console.log(author);
+    const imageAddress = randomImage.download_url;
+    console.log(imageAddress);
+    authorSpan.innerText = author;
+    img.src = imageAddress;
+    imgDiv.classList.remove("hide");
+};
+
+getImage();
+
 
