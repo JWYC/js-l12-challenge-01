@@ -16,6 +16,7 @@ const getImage= async function(){
 const selectRandomImage= function(images){
     const randomIndex = Math.floor(Math.random()*images.length);
     //console.log(randomIndex);
+    // Error here fixed...once variable images is declared above you can now treat it as normal javascript and use index number as per usual. 
     const randomImage = images[randomIndex];
     console.log(randomImage);
     displayImage(randomImage);
@@ -23,6 +24,7 @@ const selectRandomImage= function(images){
 
 const displayImage = function(randomImage){
     const author= randomImage.author;
+    // because images variable declared you can use .notation as per usual to handle parameters.
     console.log(author);
     const imageAddress = randomImage.download_url;
     console.log(imageAddress);
